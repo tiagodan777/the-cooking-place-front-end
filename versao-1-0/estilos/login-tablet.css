@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+main {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main > section#principal {
+    order: 2;
+}
+
+main > aside {
+    order: 1;
+}
+
+aside {
+    visibility: visible;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}

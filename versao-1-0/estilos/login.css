@@ -42,10 +42,18 @@ main {
     align-items: center;
 }
 
-main > section {
-    width: 70vw;
-    height: 90vh;
-    border: 1px solid var(--cor0);
+main > section#principal {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+main > section#principal > section#login {
+    width: 375px;
+    height: 405px;
+    border: 1px solid var(--cor1);
+    margin: 10px;
 
     display: flex;
     flex-flow: column nowrap;
@@ -53,39 +61,66 @@ main > section {
     align-items: center;
 }
 
-main > section > form {
+main > section#principal > section#login > form {
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
 }
 
-main > section > form > input {
-    width: 55vw;
+main > section#principal > section#login > form > input {
+    width: 300px;
     padding: 12px;
     margin: 3px;
     border: 1px solid #ccc;
 }
 
-main > section > form > input:focus {
+main > section#principal > section#login > form > input:focus {
     outline: none;
     box-shadow: none;
     border: 1px solid #ccc;
 }
 
-main > section > form > input#submit {
+main > section#principal > section#login > form > input#submit {
     background-color: var(--cor3);
     border-radius: 10px;
     color: var(--cor5);
     font-weight: bold;
+    margin-top: 10px;
 }
 
-main > section > form > input#submit:hover {
+main > section#principal > section#login > form > input#submit:hover {
     cursor: pointer;
     background-color: #cf274b;
 }
 
-main > section > a {
+main > section#principal > section#login > a {
     color: var(--cor);
     text-decoration: none;
+    margin-top: 25px;
+}
+
+main > section#principal > section#registo {
+    width: 375px;
+    height: 70px;
+    border: 1px solid var(--cor1);
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main > section#principal > section#registo > a {
+    color: var(--cor4);
+    text-decoration: none;
+}
+
+main > section#principal > section#registo > a > span {
+    color: var(--cor1);
+    font-weight: bold;
+}
+
+aside {
+    visibility: hidden;
 }

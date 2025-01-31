@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registo</title>
+    <link rel="shortcut icon" href="imagens/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/registo.css">
+</head>
+<body>
+    <main>
+        <section>
+            <img src="imagens/logos/logo-p.png" alt="" srcset="">
+            <form action="#" method="post">
+                <input type="text" name="nome" id="nome" placeholder="Nome completo">
+                <input type="number" name="telemovel" id="telemovel" placeholder="Número de telemóvel">
+                <input type="email" name="email" id="email" placeholder="Email">
+                <div id="selects">
+                    <select name="dia" id="dia">
+                        <script>
+                            var select = window.document.querySelector('select#dia')
+                            for (let dia = 1; dia <= 31; dia++) {
+                                let option = window.document.createElement('option')
+                                option.value = Number(dia)
+                                option.innerHTML = dia
+                                select.appendChild(option)
+                            }
+                        </script>
+                    </select>
+                    <select name="mes" id="mes">
+                        <script>
+                            var select = window.document.querySelector('select#mes')
+                            let meses = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Sep', 'Out', 'Nov', 'Dez']
+                            for (let mes = 0; mes <= 11; mes++) {
+                                let option = window.document.createElement('option')
+                                option.value = meses[mes]
+                                option.innerHTML = meses[mes]
+                                select.appendChild(option)
+                            }
+                        </script>
+                    </select>
+                    <select name="ano" id="ano">
+                        <script>
+                            var select = window.document.querySelector('select#ano')
+                            for (let ano = 2025; ano >= 1900; ano--) {
+                                let option = window.document.createElement('option')
+                                option.value = ano
+                                option.innerHTML = ano
+                                select.appendChild(option)
+                            }
+                        </script>
+                    </select>
+                </div>
+                <label for="genero">Género</label>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

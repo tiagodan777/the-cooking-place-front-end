@@ -30,6 +30,7 @@ body {
 
 main > h1 {
     text-align: center;
+    margin-top: 100px;
 }
 
 main {
@@ -49,8 +50,8 @@ main > div#conteiner > section {
 }
 
 main >div#conteiner >  section, main > div#conteiner >  section > form {
-    width: 425px;
-    height: 650px;
+    width: 400px;
+    height: 600px;
     background-color: var(--cor5);
     
     display: flex;

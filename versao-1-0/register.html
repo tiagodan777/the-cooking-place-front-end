@@ -10,12 +10,14 @@
 <body>
     <main>
         <section>
-            <img src="imagens/logos/logo-p.png" alt="" srcset="">
-            <form action="#" method="post">
-                <input type="text" name="nome" id="nome" placeholder="Nome completo">
-                <input type="number" name="telemovel" id="telemovel" placeholder="Número de telemóvel">
-                <input type="email" name="email" id="email" placeholder="Email">
-                <div id="selects">
+            <h1><img src="imagens/logos/logo-p.png" alt="Logo do The Cooking Place"></h1>
+            <form action="#" method="post" autocomplete="on">
+                <fielset id="contatos">
+                    <div><input type="text" name="nome" id="nome" placeholder="Nome completo" minlength="5" maxlength="60" required autocomplete="name"> <label for="nome" class="escondido">Nome</label></div>
+                    <div><input type="number" name="telemovel" id="telemovel" placeholder="Número de telemóvel" required minlength="9" maxlength="9" autocomplete="tel"> <label for="telemovel" class="escondido">Nº de Telemóvel</label></div>
+                    <div><input type="email" name="email" id="email" placeholder="Email" required autocomplete="email"> <label for="email" class="escondido">Email</label></div>
+                </fielset>
+                <fieldset id="nascimento">
                     <select name="dia" id="dia">
                         <script>
                             var select = window.document.querySelector('select#dia')
@@ -50,8 +52,18 @@
                             }
                         </script>
                     </select>
-                </div>
-                <label for="genero">Género</label>
+                </fieldset>
+                <fieldset id="genero">
+                    <label for="genero">Género</label>
+                    <label for="masc">Masculino</label><input type="radio" name="genero" id="masc">
+                    <label for="fem">Feminino</label><input type="radio" name="genero" id="fem"> 
+                    <label for="desc">Desconhecido</label><input type="radio" name="genero" id="desc"> 
+                </fieldset>
+                <fieldset id="password">
+                    <input type="password" name="password" id="password" placeholder="Password" required autocomplete="new-password" minlength="8" maxlength="80">
+                    <input type="password" name="confirmacao" id="confirmacao" placeholder="Confirmar password" required autocomplete="new-password" minlength="8" maxlength="80">
+                </fieldset>
+                <input type="submit" value="Criar">
             </form>
         </section>
     </main>

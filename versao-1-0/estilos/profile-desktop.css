@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+main {
+    align-self: center;
+}
+
 main > header {
     width: 70vw;
     margin-top: 100px;
@@ -53,13 +57,22 @@ main > header > p {
 
 main > section {
     width: 60vw;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
-main > section > a {
-    width: 310px;
-    height: 310px;
+main > section > div {
+    width: 90%;
 }
 
-main > section > a:hover {
-    
+main > section > div > a {
+    width: 250px;
+    height: 250px;
+}
+
+main > section > div > a:hover {
+    opacity: 0.5;
 }

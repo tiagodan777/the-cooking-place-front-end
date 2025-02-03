@@ -13,72 +13,97 @@ main {
     margin-top: 68px;
 }
 
-main > section > img {
+main > section#topo > section#imagem > picture > img {
     width: 100vw;
 }
 
-main > section#info > h2 {
+main > section#topo section#info {
+    padding: 0px 10px;
+}
+
+main > section#topo section#info > h2 {
     font-size: 1.4em;
     font-weight: lighter;
 }
 
-main > section#info > section {
+main > section#topo section#info > section {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
 }
 
-main > section#info > section > div > p {
+main > section#topo section#info > section > div > p {
     font-weight: normal;
     margin: 5px;
 }
 
-main > section#info > section > div > div#reacoes {
+main > section#topo section#info > section > div > div#reacoes {
     margin: 20px;
 }
 
-main > section#info > section > div > div#reacoes > div.icones {
+main > section#topo section#info > section > div > div#reacoes > div.icones {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
 }
 
-main > section#info > section > div > div#reacoes > div.icones > span.icones-reacao {
+main > section#topo section#info > section > div > div#reacoes > div.icones > span.icones-reacao {
     flex: 0 0 50px;
 }
 
-main > section#info > section > div > div#reacoes > div.numeros {
+main > section#topo section#info > section > div > div#reacoes > div.numeros {
     display: flex;
     flex-flow: row;
     align-items: center;
 }
 
-main > section#info > section > div > div#reacoes > div.numeros > span {
+main > section#topo section#info > section > div > div#reacoes > div.numeros > span {
     font-size: 0.9em;
 
     flex: 0 0 55px;
 }
 
-main > section#ingredientes {
-    align-self: flex-start;
-    margin-top: -20px;
+main > section#needs {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
-main > section#ingredientes > h2 {
+main > section#needs section#ingredientes {
+    align-self: flex-start;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+main > section#needs section#ingredientes > h2 {
     margin: 10px;
 }
 
-main > section#ingredientes > ul {
+main > section#needs section#ingredientes > ul {
     list-style-type: none;
+    list-style: none;
 }
 
-main > section#ingredientes > ul > li {
+main > section#needs section#ingredientes > ul > li {
     padding: 10px;
 }
 
-main > section#ingredientes > ul > li > input, main > section#ingredientes > ul > li > label {
+main > section#needs section#ingredientes > ul > li > input, main > section#ingredientes > ul > li > label {
     padding: 10px;
+}
+
+main > section#needs section#video {
+    position: relative;
+    width: 100vw;
+}
+
+main > section#needs section#video > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
 }
 
 main > section#steps > ul {
@@ -86,7 +111,7 @@ main > section#steps > ul {
     line-height: 1.75em;
 }
 
-main > section#steps > ul > li {
+main > section#needs section#steps > ul > li {
     margin: 15px 10px;
 }
 

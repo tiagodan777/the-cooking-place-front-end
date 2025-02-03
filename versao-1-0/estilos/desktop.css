@@ -73,7 +73,7 @@ footer {
     position: fixed;
     padding-left: 10px;
     top: 127px;
-    background-color: var(--cor5);
+    /*background-color: var(--cor5);*/
     border: none;
     /*border-right: 1px solid rgb(210, 210, 210);
     border-top: 1px solid rgb(210, 210, 210);*/

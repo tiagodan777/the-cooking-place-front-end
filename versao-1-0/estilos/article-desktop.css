@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+h1#titulo-receita {
+    font-size: 3em;
+    padding: 20px 0px 0px 0px;
+    font-weight: bolder;
+}
+
+main > section#topo {
+    width: 100vw;
+    margin-top: 30px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+main > section#topo > section#imagem {
+    width: 50%;
+    /*margin-left: 70px;*/
+}
+
+main > section#topo > section#imagem > picture > img {
+    width: 100%;
+}
+
+main > section#topo > section#info {
+    width: 50%;
+}
+
+main > section#topo section#info > section {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main > section#needs {
+    width: 95vw;
+    margin-top: 100px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+main > section#needs section#ingredientes {
+    /*align-self: flex-start;*/
+    margin-top: -20px;
+    margin-bottom: 20px;
+    width: 30vw;
+}
+
+main > section#needs section#video {
+    position: relative;
+    width: 70vw;
+}
+
+main > section#needs section#video > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65vw;
+}
+
+/*main > section#topo > section > picture > img {
+    width: 500px;
+}*/
+
+footer {
+    width: 100%;
+    position: fixed;
+    top: 94%;
+    background-color: var(--cor5);
+    padding: 10px;
+    border-top: 0.5px solid var(--cor4);
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer > a {
+    color: var(--cor4);
+}
+
+footer > a > span.descricao-icone {
+    display: none !important;
+}
+
+footer > a > span.aparece-desktop {
+
+}
+

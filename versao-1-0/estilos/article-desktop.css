@@ -4,11 +4,33 @@ h1#titulo-receita {
     font-size: 3em;
     padding: 20px 0px 0px 0px;
     font-weight: bolder;
+    text-align: center;
+}
+
+header#cabecalho-principal > form {
+    visibility: visible;
+}
+
+header#cabecalho-principal > form > input[type="search"] {
+    font-size: 1.1em;
+    width: 25vw;
+    padding: 12px;
+    border: 1px solid var(--cor0);
+    border-radius: 25px;
+}
+
+header#cabecalho-principal > form > input.escondido {
+    display: none;
+}
+
+
+main {
+    margin: auto;
 }
 
 main > section#topo {
-    width: 100vw;
-    margin-top: 30px;
+    width: 100%;
+    margin-top: 100px;
 
     display: flex;
     flex-flow: row nowrap;
@@ -37,7 +59,7 @@ main > section#topo section#info > section {
 }
 
 main > section#needs {
-    width: 95vw;
+    width: 95%;
     margin-top: 100px;
 
     display: flex;
@@ -50,19 +72,19 @@ main > section#needs section#ingredientes {
     /*align-self: flex-start;*/
     margin-top: -20px;
     margin-bottom: 20px;
-    width: 30vw;
+    width: 25%;
 }
 
 main > section#needs section#video {
     position: relative;
-    width: 70vw;
+    width: 75%;
 }
 
 main > section#needs section#video > iframe {
     position: absolute;
     top: 0;
     left: 0;
-    width: 65vw;
+    width: 100%;
 }
 
 /*main > section#topo > section > picture > img {

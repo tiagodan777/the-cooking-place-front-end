@@ -9,6 +9,10 @@ h1#titulo-receita {
     font-weight: bolder;
 }
 
+h2#descricao-receita {
+    text-align: center;
+}
+
 main {
     margin-top: 68px;
 }
@@ -72,7 +76,7 @@ main > section#needs {
 }
 
 main > section#needs section#ingredientes {
-    align-self: flex-start;
+    /*align-self: flex-start;*/
     margin-top: -20px;
     margin-bottom: 20px;
 }
@@ -91,7 +95,7 @@ main > section#needs section#ingredientes > ul > li {
 }
 
 main > section#needs section#ingredientes > ul > li > input, main > section#ingredientes > ul > li > label {
-    padding: 10px;
+    padding: 20px;
 }
 
 main > section#needs section#video {

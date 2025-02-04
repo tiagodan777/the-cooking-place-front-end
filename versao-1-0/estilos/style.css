@@ -110,7 +110,12 @@ main > article > header > a > img {
     width: 30px;
 }
 
-main > article > section > img {
+main > article > section > a  {
+    /*border-radius: 5px;*/
+    width: 100vw;
+}
+
+main > article > section > a > img {
     /*border-radius: 5px;*/
     width: 100vw;
 }

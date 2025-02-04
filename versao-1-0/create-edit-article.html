@@ -26,8 +26,8 @@
             <input type="submit" value="Pesquisar" class="escondido">
         </form>
         <div>
-            <span class="material-symbols-outlined">favorite</span>
-            <span class="material-symbols-outlined">account_circle</span>
+            <a href="create-edit-article.html"><span class="material-symbols-outlined">add_box</span></a>
+            <a href="profile.html"><span class="material-symbols-outlined">account_circle</span></a>
         </div>
     </header>
     <br>
@@ -92,7 +92,7 @@
                     <div class="ingredientes-quantidade">
                         <div class="inputs-ingredientes-quantidade">
                             <input type="text" name="ingredientes1" id="ingredientes1" placeholder="Ex: Salmão" required minlength="1" maxlength="32">
-                            <input type="number" name="quantidades1" id="quantidades1" placeholder="Ex: 3; 450g; 100ml..." required>
+                            <input type="text" name="quantidades1" id="quantidades1" placeholder="Ex: 3; 450g; 100ml..." required>
                         </div>
                     </div>
                     <input type="button" value="Adicionar Ingrediente" onclick="adicionaIngredienteEQuantidade()">
@@ -141,14 +141,14 @@
             inputText.type = 'text'
             inputText.name = `ingredientes${idNameIgrediente}`
             inputText.id = `ingredientes${idNameIgrediente}`
-            inputText.required = true
+            inputText.required = false
             inputText.minLength = 1
             inputText.maxLength = 32
 
             inputNumber.type = 'number'
             inputNumber.name = `quantidades${idNameIgrediente}`
             inputNumber.id = `quantidades${idNameIgrediente}`
-            inputNumber.required = true
+            inputNumber.required = false
 
             div.className = 'inputs-ingredientes-quantidade'
 

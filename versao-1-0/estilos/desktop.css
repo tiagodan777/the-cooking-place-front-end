@@ -10,7 +10,7 @@ header#cabecalho-principal > form {
 
 header#cabecalho-principal > form > input[type="search"] {
     font-size: 1.1em;
-    width: 25vw;
+    width: 500px;
     padding: 12px;
     border: 1px solid var(--cor0);
     border-radius: 25px;
@@ -20,6 +20,12 @@ header#cabecalho-principal > form > input.escondido {
     display: none;
 }
 
+header#cabecalho-principal > div > a > span {
+    color: black;
+    font-size: 1.7em;
+    padding: 2px;
+}
+
 main {
     order: 2;
 }
@@ -27,18 +33,22 @@ main {
 main > article {
     width: 510px;
 
-    border: 0.5px solid var(--cor4);
+    /*border: 0.5px solid var(--cor4);*/
     /*border-top: none;*/
-    border-radius: 10px;
+    /*border-radius: 10px;*/
 }
 
 main > article#primeiro-artigo {
     margin-top: 130px;
-    border-radius: 0px 0px 10px 10px;
+    /*border-radius: 0px 0px 10px 10px;*/
     border-top: none;
 }
 
-main > article > section > img {
+main > article > section > a {
+    width: 500px;
+}
+
+main > article > section > a > img {
     width: 500px;
 }
 

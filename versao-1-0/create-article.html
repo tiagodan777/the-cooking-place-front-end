@@ -30,6 +30,68 @@
     </header>
     <br>
     <hr class="escondido">
+    <main>
+        <h2>Adicionar Artigo</h2>
+        <form action="#" method="post" autocomplete="off">
+            <section id="imagem-video">
+                <div id="div-imagem">
+                    <div>
+                        <label for="imagem">Upload de imagem</label>
+                        <input type="file" name="imagem" id="imagem" required>
+                    </div>
+                </div>
+                <div id="div-video">
+                    <div>
+                        <label for="video">Upload de video</label>
+                        <input type="file" name="video" id="video">
+                    </div>
+                </div>
+            </section>
+            <section id="info-text">
+                <div id="div-titulo">
+                    <label for="titulo">Título</label>
+                    <input type="text" name="titulo" id="titulo" placeholder="Ex: Sushi" required maxlength="40">
+                </div>
+                <div id="div-descricao">
+                    <label for="descricao">Descrição</label>
+                    <input type="text" name="descricao" id="descricao" placeholder="Ex: Como fazer sushi de forma rápida e descomplicada" maxlength="128" required>
+                </div>
+                <div id="div-tempo-preparo">
+                    <label for="tempo">Tempo de preparo</label>
+                    <div id="tempo-unidade">
+                        <input type="number" name="tempo" id="tempo" placeholder="Ex: 45" required min="0">
+                        <select name="unidade" id="unidade">
+                            <optgroup label="Unidade">
+                                <option value="min">Min</option>
+                                <option value="hr">Hora</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+                <div id="div-ingredientes">
+                    <div id="labels-ingredientes-quantidade">
+                        <label for="ingredientes">Ingredientes</label>
+                        <label for="quantidade">Quantidade</label>
+                    </div>
+                    <div id="ingredientes-quantidade">
+                        <input type="text" name="ingredientes" id="ingredientes" placeholder="Ex: Salmão" required minlength="1" maxlength="32">
+                        <input type="number" name="quantidade" id="quantidade" placeholder="Ex: 3; 450g; 100ml..." required>
+                    </div>
+                    <input type="button" value="Adicionar Ingrediente">
+                </div>
+                <div id="div-passos-preparacao">
+                    <label for="passo-1">Passo 1</label>
+                    <textarea name="passo-1" id="passo-1" cols="30" rows="10"></textarea>
+                    <input type="button" value="Adicionar Passo">
+                </div>
+                <div id="div-keywords-tags">
+                    <input type="text" name="tag1" id="tag1">
+                    <input type="button" value="Adicionar Tag">
+                </div>
+            </section>
+            <input type="submit" value="Publicar Receita">
+        </form>
+    </main>
     <footer>
         <a href="pagina-principal.html"><span class="material-symbols-outlined aparece-desktop">home</span> <span class="descricao-icone">Página Principal</span></a>
         <a href="notifications.html"><span class="material-symbols-outlined aparece-desktop">favorite</span> <span class="descricao-icone nao-destaque">Notificações</span></a>

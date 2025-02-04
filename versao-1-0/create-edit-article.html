@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/desktop.css" media="screen and (min-width: 900px)">
     <link rel="stylesheet" href="estilos/create-edit-article.css">
+    <link rel="stylesheet" href="estilos/create-edit-article-desktop.css" media="screen and (min-width: 900px)">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 <body>
@@ -31,9 +32,9 @@
     </header>
     <br>
     <hr class="escondido">
-    <main>
+    <main id="principal">
         <h2>Adicionar Artigo</h2>
-        <form action="#" method="post" autocomplete="off">
+        <form action="#" method="post" autocomplete="off" id="form">
             <section id="imagem-video">
                 <div id="div-imagem">
                     <label for="imagem">Upload de imagem</label>
@@ -69,23 +70,42 @@
                         </select>
                     </div>
                 </div>
+                <div id="numero-pessoas">
+                    <label for="numero-pessoas">Nº de Pessoas</label>
+                    <select name="numero-pessoas" id="numero-pessoas">
+                        <script>
+                            let select = window.document.querySelector('select#numero-pessoas')
+                            for (let i = 1; i <= 16; i++) {
+                                let option = window.document.createElement('option')
+                                option.value = i
+                                option.innerHTML = i
+                                select.appendChild(option)
+                            }
+                        </script>
+                    </select>
+                </div>
                 <div id="div-ingredientes">
                     <div id="labels-ingredientes-quantidade">
                         <label for="ingredientes">Ingredientes</label>
                         <label for="quantidade">Quantidade</label>
                     </div>
-                    <div id="ingredientes-quantidade">
-                        <input type="text" name="ingredientes" id="ingredientes" placeholder="Ex: Salmão" required minlength="1" maxlength="32">
-                        <input type="number" name="quantidade" id="quantidade" placeholder="Ex: 3; 450g; 100ml..." required>
+                    <div class="ingredientes-quantidade">
+                        <div class="inputs-ingredientes-quantidade">
+                            <input type="text" name="ingredientes1" id="ingredientes1" placeholder="Ex: Salmão" required minlength="1" maxlength="32">
+                            <input type="number" name="quantidades1" id="quantidades1" placeholder="Ex: 3; 450g; 100ml..." required>
+                        </div>
                     </div>
-                    <input type="button" value="Adicionar Ingrediente">
+                    <input type="button" value="Adicionar Ingrediente" onclick="adicionaIngredienteEQuantidade()">
                 </div>
                 <div id="div-passos-preparacao">
-                    <label for="passo-1">Passo 1</label>
-                    <div id="textareas">
-                        <textarea name="passo-1" id="passo-1" cols="40" rows="7"></textarea>
+                    <label for="div-passos-preparacao">Passos para a Preparação</label>
+                    <div id="div-textareas">
+                        <div class="textarea">
+                            <label for="passo-1">Passo 1</label>
+                            <textarea name="passo-1" id="passo-1" cols="40" rows="7"></textarea>
+                        </div>
                     </div>
-                    <input type="button" value="Adicionar Passo">
+                    <input type="button" value="Adicionar Passo" onclick="adicionaPasso()">
                 </div>
                 <div id="div-keywords-tags">
                     <label for="tag1">Keywords / Tags</label>
@@ -107,5 +127,65 @@
         <a href="create-article.html"><span class="material-symbols-outlined aparece-mobile">add_box</span></a>
         <a href="#"><span class="material-symbols-outlined aparece-mobile">search</span></a>
     </footer>
+    <script>
+        let idNameIgrediente = 2
+        let idNamePasso = 2
+        function adicionaIngredienteEQuantidade() {
+            let inputText = window.document.createElement('input')
+            let inputNumber = window.document.createElement('input')
+            let div = window.document.createElement('div')
+            let ingredientes = window.document.querySelector('div.ingredientes-quantidade')
+            let divIngredientes = window.document.querySelector('div#div-ingredientes')
+            let form = window.document.querySelector('form#form')
+
+            inputText.type = 'text'
+            inputText.name = `ingredientes${idNameIgrediente}`
+            inputText.id = `ingredientes${idNameIgrediente}`
+            inputText.required = true
+            inputText.minLength = 1
+            inputText.maxLength = 32
+
+            inputNumber.type = 'number'
+            inputNumber.name = `quantidades${idNameIgrediente}`
+            inputNumber.id = `quantidades${idNameIgrediente}`
+            inputNumber.required = true
+
+            div.className = 'inputs-ingredientes-quantidade'
+
+            /*divIngredientes.style.border = '2px solid red'*/
+            //divIngredientes.style.height += '300px'
+            //main.style.height = Number(alturaMain)
+            //form.style.height = Number(form.offsetHeight) + Number(200)
+
+
+            div.appendChild(inputText)
+            div.appendChild(inputNumber)
+            ingredientes.appendChild(div)
+            idNameIgrediente++
+
+        }
+        
+        function adicionaPasso() {
+            let label = window.document.createElement('label')
+            let textArea = window.document.createElement('textarea')
+            let div = window.document.createElement('div')
+            let divTextAreas = window.document.querySelector('div#div-textareas')
+
+            label.setAttribute("for", `passo-${idNamePasso}`)
+            label.innerHTML = `Passo ${idNamePasso}`
+            textArea.name = `passo-${idNamePasso}`
+            textArea.id = `passo-${idNamePasso}`
+            textArea.cols = 40
+            textArea.rows = 7
+
+            div.className = 'textarea'
+
+            div.appendChild(label)
+            div.appendChild(textArea)
+            divTextAreas.appendChild(div)
+
+            idNamePasso++
+        }
+    </script>
 </body>
 </html>

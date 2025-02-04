@@ -69,8 +69,8 @@ main > section > div {
 }
 
 main > section > div > a {
-    width: 250px;
-    height: 250px;
+    width: 240px;
+    height: 240px;
 }
 
 main > section > div > a:hover {

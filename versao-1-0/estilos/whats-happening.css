@@ -51,3 +51,7 @@ main > video {
     object-fit: cover; /* Faz o vídeo cobrir toda a área */
    /* z-index: 0;*/
 }
+
+main > video::-webkit-media-controls {
+    display: none !important; /* Esconde os controles no Chrome/Safari */
+}

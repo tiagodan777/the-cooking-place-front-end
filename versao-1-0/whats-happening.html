@@ -107,7 +107,19 @@
             }
         }
 
-        // Atualiza na abertura da página
+        document.addEventListener("wheel", (event) => {
+        event.preventDefault();
+        let videos = document.querySelectorAll(".video-individual");
+        let index = Math.round(window.scrollY / window.innerHeight);
+        
+        if (event.deltaY > 0) {
+            index = Math.min(index + 1, videos.length - 1);
+        } else {
+            index = Math.max(index - 1, 0);
+        }
+        
+        videos[index].scrollIntoView({ behavior: "smooth" });
+    }, { passive: false });
     </script>
 </body>
 </html>

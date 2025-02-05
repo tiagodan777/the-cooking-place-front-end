@@ -33,15 +33,43 @@ main > h1#o-que-esta-a-acontecer {
 }
 
 main {
-    position: relative;
+    /*position: relative;*/
     padding: 0px;
     /*width: 100vw;
     height: 100vh;*/
 }
 
-main > section#todos-videos > div.video-individual {
-    position: relative;
+main > section#todos-videos {
+    height: 100vh; /* Garante que o contêiner ocupa a tela inteira */
+    overflow-y: auto; /* Habilita a rolagem vertical */
+    scroll-snap-type: y mandatory; /* Faz os vídeos travarem na tela */
 }
+
+main > section#todos-videos > div.video-individual {
+    height: 100vh; /* Cada vídeo ocupa 100% da tela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start; /* Faz cada vídeo começar do topo */
+}
+
+main > section#todos-videos > div.video-individual > video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz o vídeo cobrir toda a tela */
+    user-select: none;
+    touch-action: pan-y;
+}
+
+/*main > section#todos-videos {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}*/
+
+/*main > section#todos-videos > div.video-individual {
+    /*position: relative;
+    scroll-snap-align: start;
+}*/
 
 main > section#todos-videos > div.video-individual > nav {
     position: absolute;
@@ -69,7 +97,7 @@ main > section#todos-videos > div.video-individual > nav > ul > li > a {
     color: var(--cor5);
 }
 
-main > section#todos-videos > div.video-individual > video {
+/*main > section#todos-videos > div.video-individual > video {
     /*position: absolute;
     top: 50%;
     left: 50%;
@@ -77,12 +105,12 @@ main > section#todos-videos > div.video-individual > video {
     /*width: 100%;
     height: 100%;*/
     /*margin-top: 500px;
-    margin-bottom: 500px;*/
-    object-fit: cover; /* Faz o vídeo cobrir toda a área */
+    margin-bottom: 500px;
+    object-fit: cover; /* Faz o vídeo cobrir toda a área 
     user-select: none;
-    touch-action: pan-y; /* Permite rolagem vertical */
-   /* z-index: 0;*/
-}
+    touch-action: pan-y; /* Permite rolagem vertical
+   /* z-index: 0;
+}*/
 
 main > section#todos-videos > div.video-individual > video::-webkit-media-controls {
     display: none !important; /* Esconde os controles no Chrome/Safari */

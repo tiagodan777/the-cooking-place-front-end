@@ -108,11 +108,14 @@
                     <input type="button" value="Adicionar Passo" onclick="adicionaPasso()">
                 </div>
                 <div id="div-keywords-tags">
-                    <label for="tag1">Keywords / Tags</label>
-                    <div id="tags">
-                        <input type="text" name="tag1" id="tag1" placeholder="Ex: #sushi">
+                    <div id="div-tags">
+                        <label for="tag1">Keywords / Tags</label>
+                        <div class="tags">
+                            <label for="tag1">Tag 1</label>
+                            <input type="text" name="tag1" id="tag1" placeholder="Ex: #sushi">
+                        </div>
                     </div>
-                    <input type="button" value="Adicionar Tag">
+                    <input type="button" value="Adicionar Tag" onclick="adicionaTag()">
                 </div>
             </section>
             <input type="submit" value="Publicar Receita">
@@ -130,6 +133,7 @@
     <script>
         let idNameIgrediente = 2
         let idNamePasso = 2
+        let idNameTag = 2
         function adicionaIngredienteEQuantidade() {
             let inputText = window.document.createElement('input')
             let inputNumber = window.document.createElement('input')
@@ -186,6 +190,36 @@
 
             idNamePasso++
         }
+
+        function adicionaTag() {
+            let label = window.document.createElement('label')
+            let input = window.document.createElement('input')
+            let div = window.document.createElement('div')
+            let divTags = window.document.querySelector('div#div-tags')
+
+            label.setAttribute("for", `tag-${idNameTag}`)
+            label.innerHTML = `Tag ${idNameTag}`
+            input.name = `tag-${idNameTag}`
+            input.id = `tag-${idNameTag}`
+
+            div.className = 'tags'
+
+            div.appendChild(label)
+            div.appendChild(input)
+            divTags.appendChild(div)
+
+            idNameTag++
+        }
     </script>
 </body>
 </html>
+
+<div id="div-keywords-tags">
+    <div id="div-tags">
+        <div id="tags">
+            <label for="tag1">Keywords / Tags</label>
+            <input type="text" name="tag1" id="tag1" placeholder="Ex: #sushi">
+        </div>
+    </div>
+    <input type="button" value="Adicionar Tag" onclick="adicionaTag">
+</div>

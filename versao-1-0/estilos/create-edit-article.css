@@ -278,7 +278,7 @@ main > form > section#info-text > div#div-passos-preparacao > input[type="button
 
 main > form > section#info-text > div#div-keywords-tags {
     width: 100%;
-    height: 200px;
+    /*height: 200px;*/
 
     display: flex;
     flex-flow: column nowrap;
@@ -286,11 +286,19 @@ main > form > section#info-text > div#div-keywords-tags {
     align-items: flex-start;
 }
 
-main > form > section#info-text > div#div-keywords-tags > div#tags {
+main > form > section#info-text > div#div-keywords-tags > div#div-tags {
     width: 100%;
 }
 
-main > form > section#info-text > div#div-keywords-tags > div#tags > input {
+main > form > section#info-text > div#div-keywords-tags > div#div-tags div.tags {
+    width: 100%;
+}
+
+main > form > section#info-text > div#div-keywords-tags > div#div-tags div.tags > label {
+    padding-left: 25px;
+}
+
+main > form > section#info-text > div#div-keywords-tags > div#div-tags > div.tags > input {
     width: 95%;
     padding: 10px;
     margin: 10px;

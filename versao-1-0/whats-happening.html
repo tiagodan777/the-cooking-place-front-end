@@ -107,19 +107,47 @@
             }
         }
 
-        document.addEventListener("wheel", (event) => {
+        /*document.addEventListener("wheel", (event) => {
         event.preventDefault();
         let videos = document.querySelectorAll(".video-individual");
         let index = Math.round(window.scrollY / window.innerHeight);
         
         if (event.deltaY > 0) {
-            index = Math.min(index + 1, videos.length - 1);
+            index = index + 1, videos.length - 1;
         } else {
-            index = Math.max(index - 1, 0);
+            index = index - 1, 0;
         }
         
         videos[index].scrollIntoView({ behavior: "smooth" });
-    }, { passive: false });
+    }, { passive: false });*/
+
+        /*document.addEventListener("DOMContentLoaded", () => {
+        let videos = document.querySelectorAll(".video-individual"); // Pega todos os vídeos
+        let index = 0; // Começamos no primeiro vídeo
+        let isScrolling = false; // Evita múltiplos eventos ao mesmo tempo
+
+        document.addEventListener("wheel", (event) => {
+            if (isScrolling) return; // Se já estamos rolando, ignoramos novos eventos
+            isScrolling = true; // Bloqueia novos eventos enquanto a rolagem ocorre
+
+            if (event.deltaY > 0) { 
+                // Scroll para baixo
+                index = Math.min(index + 1, videos.length - 1);
+            } else {
+                // Scroll para cima
+                index = Math.max(index - 1, 0);
+            }
+
+            // Faz a rolagem suave até o próximo vídeo
+            videos[index].scrollIntoView({ behavior: "smooth" });
+
+            // Espera 800ms para permitir novo scroll
+            setTimeout(() => {
+                isScrolling = false;
+            }, 800);
+
+        }, { passive: false }); // Garante que o event.preventDefault() funcione
+    });*/
     </script>
 </body>
 </html>

@@ -5,6 +5,7 @@ main {
 }
 
 main > section#apagar {
+    height: 900px;
 }  
 
 main > section#apagar > section#dados > img {

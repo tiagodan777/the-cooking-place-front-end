@@ -54,9 +54,5 @@ main > video {
 
 main > video::-webkit-media-controls {
     display: none !important; /* Esconde os controles no Chrome/Safari */
-    touch-action: none;
-}
-
-video {
-    
+    touch-action: none !important;
 }

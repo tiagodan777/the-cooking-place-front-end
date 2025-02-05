@@ -45,18 +45,19 @@ main > section#todos-videos > div.video-individual {
 
 main > section#todos-videos > div.video-individual > nav {
     position: absolute;
-    top: 70%;
-    left: 93%;
+    /*top: 70%;
+    left: 93%;*/
     transform: translate(-50%, -50%);
     color: var(--cor5);
-    border: 2px solid red;
+    /*border: 2px solid red;*/
 }
 
 main > section#todos-videos > div.video-individual > nav > ul {
     width: 70px;
-    height: 350px;
+    height: 400px;
     padding: 10px;
     list-style-type: none;
+    font-weight: normal;
 
     display: flex;
     flex-flow: column nowrap;
@@ -81,7 +82,15 @@ main > section#todos-videos > div.video-individual > video {
    /* z-index: 0;*/
 }
 
-main > video::-webkit-media-controls {
+main > section#todos-videos > div.video-individual > video::-webkit-media-controls {
     display: none !important; /* Esconde os controles no Chrome/Safari */
     touch-action: none !important;
+}
+
+footer {
+    background-color: black;
+}
+
+footer > a {
+    color: var(--cor5);
 }

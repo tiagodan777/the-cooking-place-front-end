@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="estilos/whats-happening-desktop.css" media="screen and (min-width: 900px)">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
-<body onresize="atualizarTamanho()" onload="atualizarTamanho()">
+<body onresize="atualizarTamanho(); atualizarPosicao()" onload="atualizarTamanho(); atualizarPosicao()">
     <header id="cabecalho-principal">
         <h1>
             <a href="pagina-principal.html">
@@ -35,7 +35,7 @@
         <section id="todos-videos">
             <div class="video-individual">
                 <video src="videos-verticais/video-1.mp4" id="video-1" autoplay muted loop></video>
-                <nav>
+                <nav class="navegacao">
                     <ul>
                         <li><a href="#"><span class="material-symbols-outlined">egg</span></a><p>20 mil</p></li>
                         <li><a href="#"><span class="material-symbols-outlined">thumb_down</span></a><p>20 mil</p></li>
@@ -60,9 +60,8 @@
     </footer>
     <script>
         function atualizarTamanho() {
-            const largura = window.innerWidth;
-            const altura = window.innerHeight;
-            const main = window.document.querySelector('main#principal')
+            let largura = window.innerWidth;
+            let altura = window.innerHeight;
 
             for (let id = 1; id <= 3; id++) {
                 let video = window.document.querySelector(`video#video-${id}`)
@@ -70,6 +69,17 @@
                 video.style.width = `${largura}px`
                 video.style.height = `${altura}px`
             }
+        }
+
+        function atualizarPosicao() {
+            let largura = window.innerWidth;
+            let altura = window.innerHeight;
+            let nav = window.document.querySelector('nav.navegacao')
+
+            let top = altura - 225
+            let left = largura - 35
+            nav.style.top = `${top}px`
+            nav.style.left = `${left}px`
         }
 
         // Atualiza na abertura da página

@@ -2,5 +2,11 @@
 
 main {
     width: calc(100vw - 400px);
-    mar
+}
+
+main > section#apagar {
 }  
+
+main > section#apagar > section#dados > img {
+    width: 500px;
+}

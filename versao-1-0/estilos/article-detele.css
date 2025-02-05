@@ -6,7 +6,7 @@ main {
 
 main > section#apagar {
     width: 500px;
-    height: 700px;
+    height: 600px;
 
     display: flex;
     flex-flow: column nowrap;
@@ -25,6 +25,10 @@ main > section#apagar > section#dados > p {
     margin-top: 10px;
     margin-bottom: 20px;
     margin-left: 30px;
+}
+
+main > section#apagar > section#dados > img {
+    width: 300px;
 }
 
 main > section#apagar > section#opcoes > form {

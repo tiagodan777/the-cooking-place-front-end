@@ -79,6 +79,8 @@ main > section#todos-videos > div.video-individual > video {
     /*margin-top: 500px;
     margin-bottom: 500px;*/
     object-fit: cover; /* Faz o vídeo cobrir toda a área */
+    user-select: none;
+    touch-action: pan-y; /* Permite rolagem vertical */
    /* z-index: 0;*/
 }
 

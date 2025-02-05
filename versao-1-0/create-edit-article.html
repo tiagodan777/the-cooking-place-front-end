@@ -33,7 +33,7 @@
     <br>
     <hr class="escondido">
     <main id="principal">
-        <h2>Adicionar Artigo</h2>
+        <h2>Adicionar Receita</h2>
         <form action="#" method="post" autocomplete="off" id="form">
             <section id="imagem-video">
                 <div id="div-imagem">
@@ -118,7 +118,10 @@
                     <input type="button" value="Adicionar Tag" onclick="adicionaTag()">
                 </div>
             </section>
-            <input type="submit" value="Publicar Receita">
+            <section id="actions">
+                <a href="article-delete.html">Apagar</a>
+                <input type="submit" value="Publicar Receita">
+            </section>
         </form>
     </main>
     <footer>
@@ -213,13 +216,3 @@
     </script>
 </body>
 </html>
-
-<div id="div-keywords-tags">
-    <div id="div-tags">
-        <div id="tags">
-            <label for="tag1">Keywords / Tags</label>
-            <input type="text" name="tag1" id="tag1" placeholder="Ex: #sushi">
-        </div>
-    </div>
-    <input type="button" value="Adicionar Tag" onclick="adicionaTag">
-</div>

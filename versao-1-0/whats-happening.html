@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="estilos/whats-happening-desktop.css" media="screen and (min-width: 900px)">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
-<body>
+<body onresize="atualizarTamanho()" onload="atualizarTamanho()">
     <header id="cabecalho-principal">
         <h1>
             <a href="pagina-principal.html">
@@ -30,11 +30,24 @@
             <a href="profile.html"><span class="material-symbols-outlined">account_circle</span></a>
         </div>
     </header>
-    <main>
+    <main id="principal">
         <h1 id="o-que-esta-a-acontecer">O que está a acontecer?</h1>
-        <video src="videos-verticais/video-1.mp4" autoplay muted loop></video>
-        <video src="videos-verticais/video-2.mp4" autoplay muted loop></video>
-        <video src="videos-verticais/video-3.mp4" autoplay muted loop></video>
+        <section id="todos-videos">
+            <div class="video-individual">
+                <video src="videos-verticais/video-1.mp4" id="video-1" autoplay muted loop></video>
+                <nav>
+                    <ul>
+                        <li><a href="#"><span class="material-symbols-outlined">egg</span></a><p>20 mil</p></li>
+                        <li><a href="#"><span class="material-symbols-outlined">thumb_down</span></a><p>20 mil</p></li>
+                        <li><a href="#"><span class="material-symbols-outlined">chat</span></a><p>20 mil</p></li>
+                        <li><a href="#"><span class="material-symbols-outlined">send</span></a><p>20 mil</p></li>
+                        <li><a href="#"><span class="material-symbols-outlined">account_circle</span></a><p>20 mil</p></li>
+                    </ul>
+                </nav>
+            </div>
+            <video src="videos-verticais/video-2.mp4" id="video-2" autoplay muted loop></video>
+            <video src="videos-verticais/video-3.mp4" id="video-3" autoplay muted loop></video>
+        </section>
     </main>
     <footer>
         <a href="pagina-principal.html"><span class="material-symbols-outlined aparece-desktop">home</span> <span class="descricao-icone">Página Principal</span></a>
@@ -45,5 +58,21 @@
         <a href="create-article.html"><span class="material-symbols-outlined aparece-mobile">add_box</span></a>
         <a href="#"><span class="material-symbols-outlined aparece-mobile">search</span></a>
     </footer>
+    <script>
+        function atualizarTamanho() {
+            const largura = window.innerWidth;
+            const altura = window.innerHeight;
+            const main = window.document.querySelector('main#principal')
+
+            for (let id = 1; id <= 3; id++) {
+                let video = window.document.querySelector(`video#video-${id}`)
+
+                video.style.width = `${largura}px`
+                video.style.height = `${altura}px`
+            }
+        }
+
+        // Atualiza na abertura da página
+    </script>
 </body>
 </html>

@@ -34,7 +34,7 @@
         <h1 id="o-que-esta-a-acontecer">O que está a acontecer?</h1>
         <section id="todos-videos">
             <div class="video-individual">
-                <video src="videos-verticais/video-1.mp4" id="video-1" autoplay muted loop></video>
+                <video src="videos-verticais/video-1.mp4" id="video-1" muted loop></video>
                 <nav id="navegacao-1">
                     <ul>
                         <li><a href="#"><span class="material-symbols-outlined">egg</span></a><p>20 mil</p></li>
@@ -46,7 +46,7 @@
                 </nav>
             </div>
             <div class="video-individual">
-                <video src="videos-verticais/video-2.mp4" id="video-2" autoplay muted loop></video>
+                <video src="videos-verticais/video-2.mp4" id="video-2" muted loop></video>
                 <nav id="navegacao-2">
                     <ul>
                         <li><a href="#"><span class="material-symbols-outlined">egg</span></a><p>20 mil</p></li>
@@ -58,7 +58,7 @@
                 </nav>
             </div>
             <div class="video-individual">
-                <video src="videos-verticais/video-3.mp4" id="video-3" autoplay muted loop></video>
+                <video src="videos-verticais/video-3.mp4" id="video-3" muted loop></video>
                 <nav id="navegacao-3">
                     <ul>
                         <li><a href="#"><span class="material-symbols-outlined">egg</span></a><p>20 mil</p></li>
@@ -148,6 +148,27 @@
 
         }, { passive: false }); // Garante que o event.preventDefault() funcione
     });*/
+
+    document.addEventListener("DOMContentLoaded", () => {
+    let videos = document.querySelectorAll("video");
+
+    // Configura o Observer
+    let observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            let video = entry.target;
+
+            if (entry.isIntersecting) {
+                video.play(); // Toca o vídeo quando entra na tela
+            } else {
+                video.pause(); // Pausa quando sai da tela
+                video.currentTime = 0; // Reinicia o vídeo quando sai
+            }
+        });
+    }, { threshold: 0.6 }); // Só ativa quando pelo menos 60% do vídeo está visível
+
+    // Aplica o Observer a cada vídeo
+    videos.forEach(video => observer.observe(video));
+});
     </script>
 </body>
 </html>

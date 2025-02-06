@@ -30,7 +30,7 @@ main > h2 {
 
 main > form {
     width: 98%;
-    border: 1px solid rgb(210, 210, 210);
+    border: none;
 
     display: flex;
     flex-flow: row nowrap;

@@ -69,7 +69,7 @@ main {
     flex-flow: column nowrap;
 }
 
-main > article {
+main > section#todos-os-artigos > article {
     width: 98vw;
     border-bottom: 0.5px solid var(--cor4);
     margin-top: 50px;
@@ -79,11 +79,11 @@ main > article {
     flex-flow: column nowrap;
 }
 
-main > article#primeiro-artigo {
+main > section#todos-os-artigos > article#diferente {
     margin-top: 90px;
 }
 
-main > article > header {
+main > section#todos-os-artigos >  article > header {
     width: 100%;
     padding: 12px;
     font-size: 0.9em;
@@ -95,7 +95,7 @@ main > article > header {
     align-items: center;
 }
 
-main > article > header > a {
+main > section#todos-os-artigos >  article > header > a {
     text-decoration: none;
     color: var(--cor6);
     display: flex;
@@ -104,58 +104,58 @@ main > article > header > a {
     align-items: center;
 }
 
-main > article > header > a > img {
+main > section#todos-os-artigos >  article > header > a > img {
     border-radius: 50%;
     margin-right: 10px;
     width: 30px;
 }
 
-main > article > section > a  {
+main > section#todos-os-artigos >  article > section > a  {
     /*border-radius: 5px;*/
     width: 100vw;
 }
 
-main > article > section > a > img {
+main > section#todos-os-artigos >  article > section > a > img {
     /*border-radius: 5px;*/
     width: 100vw;
 }
 
-main > article > aside.aside-principal {
+main > section#todos-os-artigos >  article > aside.aside-principal {
     /*border: 2px solid red;*/
     width: 100%;
     padding: 0px 25px;
 }
 
-main > article > aside.aside-principal > section > div.icones {
+main > section#todos-os-artigos >  article > aside.aside-principal > section > div.icones {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
 }
 
-main > article > aside.aside-principal > section > div.icones > span.icones-reacao {
+main > section#todos-os-artigos >  article > aside.aside-principal > section > div.icones > span.icones-reacao {
     flex: 0 0 50px;
 }
 
-main > article > aside.aside-principal > section > div.numeros {
+main > section#todos-os-artigos >  article > aside.aside-principal > section > div.numeros {
     display: flex;
     flex-flow: row;
     align-items: center;
 }
 
-main > article > aside.aside-principal > section > div.numeros > span {
+main > section#todos-os-artigos >  article > aside.aside-principal > section > div.numeros > span {
     font-size: 0.9em;
 
     flex: 0 0 55px;
 }
 
-main > article > aside.aside-principal > section > p {
+main > section#todos-os-artigos >  article > aside.aside-principal > section > p {
     font-size: 0.9em;
     font-weight: normal;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-main > article > aside.aside-principal > aside > a {
+main > section#todos-os-artigos >  article > aside.aside-principal > aside > a {
     display: block;
     font-weight: normal;
     color: var(--cor1);

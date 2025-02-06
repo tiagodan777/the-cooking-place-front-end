@@ -32,25 +32,38 @@ main {
     order: 2;
 }
 
-main > article {
-    width: 510px;
+main > section#todos-os-artigos {
+    padding: 5px;
+    width: 512px;
+    margin-top: 150px;
+    /*border: 1px solid rgb(210, 210, 210);*/
+}
+
+main > section#todos-os-artigos > article {
+    width: 500px;
+    margin-top: 100px;
+    border: 1px solid rgb(210, 210, 210);
 
     /*border: 0.5px solid var(--cor4);*/
     /*border-top: none;*/
     /*border-radius: 10px;*/
 }
 
-main > article#primeiro-artigo {
-    margin-top: 130px;
+main > section#todos-os-artigos > article#diferente {
+    margin-top: 30px;
+}
+
+main > section#todos-os-artigos > article#primeiro-artigo {
+    /*margin-top: 130px;*/
     /*border-radius: 0px 0px 10px 10px;*/
     border-top: none;
 }
 
-main > article > section > a {
+main > section#todos-os-artigos > article > section > a {
     width: 500px;
 }
 
-main > article > section > a > img {
+main > section#todos-os-artigos > article > section > a > img {
     width: 500px;
 }
 
@@ -81,14 +94,21 @@ hr.escondido {
 
 footer {
     width: 265px;
+<<<<<<< Updated upstream
     height: calc(100vh - 120px);
+=======
+    height: 600px;
+>>>>>>> Stashed changes
     position: fixed;
     padding-left: 10px;
-    top: 127px;
+    top: 240px;
+    left: calc(50% - 516px);
     /*background-color: var(--cor5);*/
     border: none;
     /*border-right: 1px solid rgb(210, 210, 210);
     border-top: 1px solid rgb(210, 210, 210);*/
+    border: 1px solid rgb(210, 210, 210);
+    border-right: none;
     
     flex-flow: column nowrap;
     justify-content: space-evenly;

@@ -58,8 +58,8 @@ main > section#todos-videos > div.video-individual > video {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Faz o vídeo cobrir toda a tela */
-    user-select: none;
-    touch-action: pan-y;
+    /*user-select: none;
+    touch-action: pan-y;*/
 }
 
 main > section#todos-videos > div.video-individual > nav {

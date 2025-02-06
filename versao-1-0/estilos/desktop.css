@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 header#cabecalho-principal {
-    border-bottom: none;
+    border-bottom: none !important;
 }
 
 header#cabecalho-principal > form {

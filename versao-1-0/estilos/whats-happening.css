@@ -51,6 +51,7 @@ main > section#todos-videos > div.video-individual {
     align-items: center;
     justify-content: center;
     scroll-snap-align: start; /* Faz cada vídeo começar do topo */
+    position: relative;
 }
 
 main > section#todos-videos > div.video-individual > video {
@@ -61,17 +62,8 @@ main > section#todos-videos > div.video-individual > video {
     touch-action: pan-y;
 }
 
-/*main > section#todos-videos {
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-}*/
-
-/*main > section#todos-videos > div.video-individual {
-    /*position: relative;
-    scroll-snap-align: start;
-}*/
-
 main > section#todos-videos > div.video-individual > nav {
+    display: block;
     position: absolute;
     /*top: 70%;
     left: 93%;*/

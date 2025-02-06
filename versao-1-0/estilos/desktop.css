@@ -81,7 +81,7 @@ hr.escondido {
 
 footer {
     width: 265px;
-    height: calc(100vh - 120px);
+    height: 800px;
     position: fixed;
     padding-left: 10px;
     top: 127px;

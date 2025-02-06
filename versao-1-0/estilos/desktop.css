@@ -94,15 +94,7 @@ hr.escondido {
 
 footer {
     width: 265px;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    height: calc(100vh - 120px);
-=======
     height: 600px;
->>>>>>> Stashed changes
-=======
-    height: 600px;
->>>>>>> Stashed changes
     position: fixed;
     padding-left: 10px;
     top: 240px;

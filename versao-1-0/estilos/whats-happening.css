@@ -114,7 +114,7 @@ main > section#todos-videos > div.video-individual > nav > ul > li > a {
 
 main > section#todos-videos > div.video-individual > video::-webkit-media-controls {
     /*display: none !important; /* Esconde os controles no Chrome/Safari */
-    /*touch-action: none !important;
+    /*touch-action: none !important;*/
 }
 
 footer {

@@ -109,8 +109,8 @@ footer > a {
 }
 
 footer > a:hover {
-    background-color: var(--cor1);
-    color: var(--cor5);
+    /*background-color: var(--cor1);*/
+    color: var(--cor1);
 }
 
 footer > a > span.aparece-desktop {

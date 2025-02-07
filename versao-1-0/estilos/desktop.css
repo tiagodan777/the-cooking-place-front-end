@@ -52,6 +52,7 @@ main > article > section > a {
 
 main > article > section > a > img {
     width: 500px;
+    border-radius: 10px;
 }
 
 hr.escondido {
